@@ -15,4 +15,30 @@ At each time, the state is a combination of the current input and the previous h
 
 That’s because in order to determine the weights, we keep calculating how our loss changes as the input changes. Now if the input we have to consider, at an arbitrary timestep, ranges back indefinitely - then we will not be able to calculate all those gradients. In practice, then, our hidden state will, at every iteration, be carried forward through a fixed number of steps.
 
+### Libraries needed
 
+```r
+# Core Tidyverse
+library(tidyverse)
+library(glue)
+library(forcats)
+
+# Time Series
+library(timetk)
+library(tidyquant)
+library(tibbletime)
+
+# Visualization
+library(cowplot)
+
+# Preprocessing
+library(recipes)
+
+# Sampling / Accuracy
+library(rsample)
+library(yardstick) 
+
+# Modeling
+library(keras)
+library(tfruns)
+```
